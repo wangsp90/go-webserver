@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<!-- 引入Vue -->
+	<script src="//v1.vuejs.org/js/vue.min.js"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+	<!-- 引入组件库 -->
+	<script src="//unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p>用户名：</p>
+		<i-input :value.sync="user" placeholder="请输入..." style="width: 300px"></i-input>
+		<p>密码：</p>
+		<i-input :value.sync="passwd" placeholder="请输入..." style="width: 300px"></i-input>
+		<br>
+		<br>
+		<i-button type="success" @click="signin" >Sign In</i-button>
+	</div>	
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            user:"",
+            passwd:""
+        },
+        methods: {
+            signin() {
+                this.visible = true;
+            }
+        }
+    })
+</script>
+</html>

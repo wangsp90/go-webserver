@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload File</title>
+	<!-- 引入Vue -->
+	<script src="//v1.vuejs.org/js/vue.min.js"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+	<!-- 引入组件库 -->
+	<script src="//unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<Upload
+        multiple
+        type="drag"
+        action="//jsonplaceholder.typicode.com/posts/">
+        <div style="padding: 20px 0">
+            <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
+            <p>点击或将文件拖拽到这里上传</p>
+        </div>
+    </Upload>
+	</div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            visible: false
+        },
+        methods: {
+            show: function () {
+                this.visible = true;
+            }
+        }
+    })
+</script>
+</html>
